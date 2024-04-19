@@ -3,6 +3,7 @@ the phonemes together in order to generate a human like speech.
 '''
 import librosa #this will be used to process audio
 import numpy as np
+from nltk.tokenize import sent_tokenize
 
 def load_wav(file_name):
     #loads wav file and returns waveform and sample rate
@@ -15,4 +16,7 @@ def add_silence(audio, silence_duration):
     silence = np.zeros(silence_length)
     return np.concatenate((silence, audio))
 #next steps: using NLP to break down text(tokenization), looking for a database with phonemes for the algorithm to use, and more
-
+#planning to possibly use the tokenization method that was used in a previous project
+def tokenize_file(file_name):
+    
+    
